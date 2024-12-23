@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shryea's Website</title>
+    <style>
+        /* General styling for body */
+        body {
+            background-color: #ffffff;
+            margin: 0;
+            font-family: Arial, sans-serif; /* Default font for body */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        /* Quarter page section */
+        .quarter-page {
+            background-color: #d5b2b2;
+            width: 100%;
+            height: 30vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .quarter-page h1 {
+            font-size: 3em;
+            font-family: "Times New Roman", Times, serif;
+            margin: 0;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding: 20px;
+            background-color: transparent;
+            z-index: 1000;
+        }
+
+        .menu-icon {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            width: 30px;
+            height: 21px;
+            justify-content: space-between;
+            background-color: #333;
+        }
+
+        .menu-icon div {
+            width: 100%;
+            height: 4px;
+            background-color: #333;
+        }
+
+        /* Navigation menu - hidden by default */
+        .nav-links {
+            display: none;
+            flex-direction: column;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #fff;
+            border-left: 2px solid #ddd;
+            padding-top: 60px;
+            width: 250px;
+            height: 100%;
+            text-align: left;
+            box-shadow: -2px 0px 10px rgba(0, 0, 0, 0.2);
+            font-family: "Times New Roman", Times, serif; /* Apply Times New Roman to navbar */
+        }
+
+        .nav-links a {
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #333;
+            font-size: 1.5em;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .nav-links a:hover {
+            background-color: #f4f4f4;
+        }
+
+        /* Toggle menu visibility */
+        .nav-links.active {
+            display: flex;
+        }
+
+        /* Style for content below the quarter-page */
+        .content {
+            padding-top: 20px;
+            text-align: center;
+            font-family: "Times New Roman", Times, serif; /* Apply Times New Roman to the content */
+        }
+    </style>
+</head>
+<body>
+    <!-- Hamburger menu button -->
+    <div class="navbar">
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Navigation menu -->
+    <div class="nav-links" id="navLinks">
+        <a href="photography.html">Photography</a>
+    </div>
+
+    <!-- Quarter page section with title -->
+    <div class="quarter-page">
+        <h1>Shreya Gavande</h1>
+    </div>
+
+    <!-- Content below the quarter page -->
+    <div class="content">
+        <p>Some introductory content goes here.</p>
+    </div>
+
+    <script>
+        // Toggle the navigation menu visibility
+        function toggleMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
